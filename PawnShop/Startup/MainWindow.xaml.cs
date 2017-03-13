@@ -23,6 +23,8 @@ namespace Startup
         public MainWindow()
         {
             InitializeComponent();
+            this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight * 0.80);
+            this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth * 0.85);
         }
     }
 }
