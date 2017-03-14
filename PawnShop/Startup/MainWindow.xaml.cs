@@ -25,6 +25,8 @@ namespace Startup
             InitializeComponent();
             this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight * 0.80);
             this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth * 0.85);
+
+            this.DataContext = new WindowViewModel(this);
         }
     }
 }
