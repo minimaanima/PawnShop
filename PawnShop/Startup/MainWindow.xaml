@@ -48,8 +48,7 @@
 
                                         <!-- Title Bar -->
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}" />
-                                        <!-- Drop shadow -->
-                                        <RowDefinition Height="Auto" />
+                                        
                                         <!-- Window Content -->
                                         <RowDefinition Height="*" />
 
@@ -75,58 +74,30 @@
 
                                         <!-- Title -->
                                         <Viewbox Grid.Column="1" Margin="0">
-                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Welcome, friend!'}" />
+                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='PawnShop'}" HorizontalAlignment="Center" Margin="32 0 0 0"  />
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
                                         <StackPanel Grid.Column="2" Orientation="Horizontal">
                                             <Button Style="{StaticResource MyCustomMinimize}" Command="{Binding MinimizeCommand}">
-                                                <Image Source="..\Images\minimizeGreen.png" />
+                                                <Image RenderOptions.BitmapScalingMode="HighQuality"
+                                                       Source="..\Images\minimizeGreen.png" />
                                             </Button>
                                             <Button Style="{StaticResource MyCustomMaximize}" Command="{Binding MaximizeCommand}">
-                                                <Image Source="..\Images\maximizeArrow.png" />
+                                                <Image RenderOptions.BitmapScalingMode="HighQuality"
+                                                       Source="..\Images\maximizeArrow.png" />
                                             </Button>
                                             <Button Style="{StaticResource MyCustomClose}" Command="{Binding CloseCommand}">
-                                                <Image Source="..\Images\error.png" />
+                                                <Image RenderOptions.BitmapScalingMode="HighQuality"
+                                                       Source="..\Images\error.png" />
                                             </Button>
                                         </StackPanel>
-                                        <!-- Window Buttons --><!--
-                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_" />
-                                            <Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowControlButton}" Content="[ ]" />
-                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}" Content="X" />
-                                        </StackPanel>-->
-
                                     </Grid>
-
-                                    <!-- Drop shadow -->
-                                    <Border Grid.Row="1" Height="6" BorderThickness="0 0.2 0 0">
-                                        <!-- Underline -->
-                                        <Border.BorderBrush>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1, 0">
-                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="0.0" />
-                                                <GradientStop Color="{StaticResource ForegroundMain}" Offset="0.5" />
-                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0" />
-                                            </LinearGradientBrush>
-                                        </Border.BorderBrush>
-
-                                        <!-- Drop shadow -->
-                                        <Border.Background>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0, 1">
-                                                <GradientStop Color="{StaticResource BackgroundVeryLight}" Offset="0.0" />
-                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0" />
-                                            </LinearGradientBrush>
-                                        </Border.Background>
-
-                                    </Border>
-
                                     <!-- Page Content -->
-                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}">
-                                        <ContentPresenter Content="{TemplateBinding Content}" />
+                                    <Border Grid.Row="1" Padding="{Binding InnerContentPadding}">
+                                        <ContentPresenter Content="{TemplateBinding Content}" />    
                                     </Border>
-
                                 </Grid>
-
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -145,6 +116,8 @@
     </WindowChrome.WindowChrome>
 
     <Grid Background="{StaticResource ForegroundLightBrush}">
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage,Converter={local:ApplicationPageValueConverter}}"/>
+        
     </Grid>
 
 </Window>

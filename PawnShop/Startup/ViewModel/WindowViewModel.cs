@@ -118,6 +118,11 @@ namespace Startup
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
         #endregion
+         
+        /// <summary>
+        /// the current page of the application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
         #region Commands
 
