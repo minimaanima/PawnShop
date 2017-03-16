@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorizationModels\CurrentUserManager.cs" />
     <Compile Include="AuthorizationModels\Credentials.cs" />
     <Compile Include="BusinessModels\Address.cs" />
     <Compile Include="BusinessModels\CashBox.cs" />
