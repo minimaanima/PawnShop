@@ -2,6 +2,7 @@
 {
     using Exceptions;
     using Models.AuthorizationModels;
+    using Models.BusinessModels;
 
     public class AuthorizationManager
     {
@@ -29,6 +30,27 @@
             }
 
             throw new InvalidEmailOrPasswordException("Email or Password are incorrect !");
+        }
+
+        public void Register(string username, string password, string confirmedPassword)
+        {
+            if (!password.Equals(confirmedPassword))
+            {
+                throw new PasswordsDontMatchException("The two entered passwords are not equal.");
+            }
+
+            var user = new User()
+            {
+                Credentials = new Credentials()
+                {
+                    Email = username,
+                    Password = password
+                }
+            };
+
+            this.context.Users.Add(user);
+            context.SaveChanges();
+            CurrentUserManager.CurrentUser = user;
         }
     }
 }
