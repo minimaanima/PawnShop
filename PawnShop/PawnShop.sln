@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawnShop.Data", "PawnShop.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawnShop.Models", "PawnShop.Models\PawnShop.Models.csproj", "{00A2860B-E50D-4EFD-B304-5667BD78BCC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawnShop.CommunicationService", "PawnShop.CommunicationService\PawnShop.CommunicationService.csproj", "{A0540CFD-6890-4608-BBD1-F10E6879BA94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{00A2860B-E50D-4EFD-B304-5667BD78BCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00A2860B-E50D-4EFD-B304-5667BD78BCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00A2860B-E50D-4EFD-B304-5667BD78BCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0540CFD-6890-4608-BBD1-F10E6879BA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0540CFD-6890-4608-BBD1-F10E6879BA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0540CFD-6890-4608-BBD1-F10E6879BA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0540CFD-6890-4608-BBD1-F10E6879BA94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
