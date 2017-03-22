@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PawnShop.CommunicationService.Core;
+using PawnShop.CommunicationService.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +26,22 @@ namespace Startup.Pages
         {
             InitializeComponent();
         }
+
+        private void login_Btn(object sender, RoutedEventArgs e)
+        {
+            var username = this.username.Text;
+            var password = this.password.Password;
+            var command = "Login";
+            CommandDispatcher dispatcher = new CommandDispatcher();
+            dispatcher.DispatchCommand(new string[]
+            {
+                command,
+                username,
+                password
+            });
+            var user = LoginUser.User.Credentials.Email;
+            this.TestBox.Content = user;
+        }
+
     }
 }

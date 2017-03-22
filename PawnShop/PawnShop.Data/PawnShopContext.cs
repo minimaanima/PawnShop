@@ -3,13 +3,14 @@ namespace PawnShop.Data
     using System.Data.Entity;
     using Models.AuthorizationModels;
     using Models.BusinessModels;
-
+    using Initializers;
 
     public class PawnShopContext : DbContext
     {
         public PawnShopContext()
             : base("name=PawnShopContext")
         {
+            //Database.SetInitializer(new PawnShopIni());
         }
 
         public virtual IDbSet<User> Users { get; set; }

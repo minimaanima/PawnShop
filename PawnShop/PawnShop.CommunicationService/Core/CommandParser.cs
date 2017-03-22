@@ -38,8 +38,8 @@
         private void Initilize()
         {
             this.commands = new Dictionary<string, ICommand>();
-            
-            //TODO: ADD COMMANDS
+
+            this.commands.Add("Login", new LoginCommand(null));
         }
     }
 }

@@ -36,16 +36,18 @@
                                    FontFamily="{StaticResource LatoRegular}"
                                    Foreground="{StaticResource WordBlueBrush}" 
                                        Margin="0 0 0 20"/>
-                            <!-- Email -->
-                            <TextBox Tag="Email" Height="30" FontSize="20"/>
+                            <!-- Username -->
+                            <TextBox x:Name="username" Tag="Username" Height="30" FontSize="20"/>
 
                             <!-- Password -->
-                            <PasswordBox Tag="Password" Margin="0 10 0 30" Height="30" FontSize="20" />
+                            <PasswordBox x:Name="password" Tag="Password" Margin="0 10 0 30" Height="30" FontSize="20" />
                             
 
                             <!-- Next button -->
-                            <Button Content="Submit" HorizontalAlignment="Center" FontSize="30" />
-                            <Button Style="{StaticResource TextButton}" Content="I already have an account" HorizontalAlignment="Center" FontSize="18" />
+                            <Button Content="Submit" HorizontalAlignment="Center" FontSize="30" Click="login_Btn" />
+                            <Button Style="{StaticResource TextButton}" Content="Register" HorizontalAlignment="Center" FontSize="18" />
+
+                            <Label x:Name="TestBox" Content="Test"/>
 
                         </StackPanel>
                         

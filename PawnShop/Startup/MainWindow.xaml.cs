@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PawnShop.Data;
 
 namespace Startup
 {
@@ -23,9 +24,9 @@ namespace Startup
         public MainWindow()
         {
             InitializeComponent();
+            // Screen Size
             this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight * 0.80);
             this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth * 0.85);
-
             this.DataContext = new WindowViewModel(this);
         }
     }
