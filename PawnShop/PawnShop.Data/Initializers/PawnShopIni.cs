@@ -9,7 +9,7 @@ using PawnShop.Models.AuthorizationModels;
 
 namespace PawnShop.Data.Initializers
 {
-    class PawnShopIni: DropCreateDatabaseAlways<PawnShopContext>
+    public class PawnShopIni: DropCreateDatabaseAlways<PawnShopContext>
     {
         protected override void Seed(PawnShopContext context)
         {
@@ -23,6 +23,7 @@ namespace PawnShop.Data.Initializers
             };
             context.Users.Add(user);
             context.SaveChanges();
+
             base.Seed(context);
         }
     }

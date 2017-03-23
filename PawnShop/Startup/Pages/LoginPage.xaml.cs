@@ -14,13 +14,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Startup.Interfaces;
+using Startup.SwitchingService;
 
 namespace Startup.Pages
 {
     /// <summary>
     /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class LoginPage : Page, ISwitchable
     {
         public LoginPage()
         {
@@ -40,8 +42,13 @@ namespace Startup.Pages
                 password
             });
             var user = LoginUser.User.Credentials.Email;
-            this.TestBox.Content = user;
+            
+            Switcher.Switch(new TestPage());
         }
 
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
