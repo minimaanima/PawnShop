@@ -20,10 +20,5 @@ namespace PawnShop.Models.BusinessModels
         public virtual Office Office { get; set; }
 
         public virtual ICollection<CashOperation> CashOperations { get; set; }
-
-        public void DayReport()
-        {
-            //TODO:
-        }
     }
 }

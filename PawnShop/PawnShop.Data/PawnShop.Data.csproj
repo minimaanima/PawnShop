@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\ClientDto.cs" />
+    <Compile Include="DTOs\ContractDto.cs" />
     <Compile Include="Initializers\PawnShopIni.cs" />
     <Compile Include="PawnShopContext.cs" />
     <Compile Include="Program.cs" />
