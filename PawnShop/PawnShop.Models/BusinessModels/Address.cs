@@ -4,13 +4,8 @@ namespace PawnShop.Models.BusinessModels
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class Address
+    public abstract class Address
     {
-        public Address()
-        {
-            this.Clients = new HashSet<Client>();
-        }
-
         [Key]
         public int Id { get; set; }
 
@@ -20,7 +15,5 @@ namespace PawnShop.Models.BusinessModels
         public int TownId { get; set; }
 
         public virtual Town Town { get; set; }
-
-        public virtual ICollection<Client> Clients { get; set; }
     }
 }

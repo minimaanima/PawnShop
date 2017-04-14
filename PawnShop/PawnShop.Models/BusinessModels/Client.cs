@@ -9,7 +9,6 @@
         public Client()
         {
             this.Contracts = new HashSet<Contract>();
-            this.Offices = new HashSet<Office>();
         }
 
         [Key]
@@ -31,7 +30,7 @@
 
         public int AddressId { get; set; }
 
-        public virtual Address Address { get; set; }
+        public virtual ClientAddress Address { get; set; }
 
         [Required]
         public string IDCardNumber { get; set; }
@@ -40,7 +39,5 @@
         public DateTime RegistrationDate { get; set; }
 
         public virtual ICollection<Contract> Contracts { get; set; }
-
-        public virtual ICollection<Office> Offices { get; set; }
     }
 }
