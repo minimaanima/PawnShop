@@ -82,6 +82,7 @@
     <Compile Include="ContractsButtonColumn.cs" />
     <Compile Include="DataModels\ApplicationPage.cs" />
     <Compile Include="Interfaces\ISwitchable.cs" />
+<<<<<<< HEAD
     <Compile Include="Pages\AddClientPage.xaml.cs">
       <DependentUpon>AddClientPage.xaml</DependentUpon>
     </Compile>
@@ -112,6 +113,14 @@
     <Compile Include="Pages\ViewContractPage.xaml.cs">
       <DependentUpon>ViewContractPage.xaml</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+>>>>>>> df251bf378ce915a10bdb267680b3047ed4ddfee
     <Compile Include="SwitchingService\Switcher.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
@@ -159,18 +168,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
     <Page Include="Pages\RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+>>>>>>> df251bf378ce915a10bdb267680b3047ed4ddfee
     <Page Include="Pages\TestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
     <Page Include="Pages\ViewContractPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+>>>>>>> df251bf378ce915a10bdb267680b3047ed4ddfee
     <Page Include="Styles\Buttons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

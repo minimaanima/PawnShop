@@ -44,6 +44,7 @@ namespace Startup.Pages
             var user = LoginUser.User.Credentials.Email;
             
             Switcher.Switch(new TestPage());
+<<<<<<< HEAD
         }
         private void register_btn(object sender, RoutedEventArgs e)
         {
@@ -53,5 +54,13 @@ namespace Startup.Pages
         {
             throw new NotImplementedException();
         }
+=======
+        }
+
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+>>>>>>> df251bf378ce915a10bdb267680b3047ed4ddfee
     }
 }

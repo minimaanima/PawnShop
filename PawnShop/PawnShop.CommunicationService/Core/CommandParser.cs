@@ -43,7 +43,10 @@
             this.commands.Add("Logout", new LogoutCommand(null));
             this.commands.Add("Register", new RegisterCommand(null));
             this.commands.Add("CashBoxTransaction", new CashBoxTransactionCommand(null));
+<<<<<<< HEAD
             this.commands.Add("AddContract", new AddContract(null));
+=======
+>>>>>>> df251bf378ce915a10bdb267680b3047ed4ddfee
         }
     }
 }
