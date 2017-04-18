@@ -112,6 +112,7 @@
     <Compile Include="Pages\ViewContractPage.xaml.cs">
       <DependentUpon>ViewContractPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowContractsButtonColumn.cs" />
     <Compile Include="SwitchingService\Switcher.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />

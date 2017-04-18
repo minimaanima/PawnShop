@@ -71,10 +71,8 @@ namespace Startup.Pages
 
         private void OnLoaded(object sender, EventArgs e)
         {
-            this.myDataGrid.Columns.Add(new ButtonColumn()
-            {
-                Header = "Contracts"
-            });
+            this.myDataGrid.Columns.Add(new ButtonColumn());
+            this.myDataGrid.Columns.Add(new ShowContractsButtonColumn());
         }
     }
 }
