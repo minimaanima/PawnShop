@@ -41,6 +41,7 @@ namespace Startup
         {
             ClientDto obj = ((FrameworkElement) sender).DataContext as ClientDto;
             Switcher.Switch(new AddContractPage(obj));
+            //GIT HUB IS FUCKING SHIT
         }
     }
 }
