@@ -49,8 +49,10 @@
     <Compile Include="BusinessModels\CashBox.cs" />
     <Compile Include="BusinessModels\CashOperation.cs" />
     <Compile Include="BusinessModels\Client.cs" />
+    <Compile Include="BusinessModels\ClientAddress.cs" />
     <Compile Include="BusinessModels\Contract.cs" />
     <Compile Include="BusinessModels\Office.cs" />
+    <Compile Include="BusinessModels\OfficeAddress.cs" />
     <Compile Include="BusinessModels\Town.cs" />
     <Compile Include="Enums\OperationType.cs" />
     <Compile Include="Enums\Status.cs" />

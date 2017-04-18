@@ -9,24 +9,20 @@ namespace PawnShop.Models.BusinessModels
         public Office()
         {
             this.Employees = new HashSet<User>();
-            this.Contracts = new HashSet<Contract>();
-            this.Clients = new HashSet<Client>();
         }
 
         [Key]
+        [ForeignKey("Address")]
         public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
 
-        [ForeignKey("Id")]
-        public virtual Address Address { get; set; }
+        public virtual OfficeAddress Address { get; set; }
+
+        public virtual CashBox CashBox { get; set; }
 
         [InverseProperty("Office")]
         public virtual ICollection<User> Employees { get; set; }
-
-        public virtual ICollection<Contract> Contracts { get; set; }
-
-        public virtual ICollection<Client> Clients { get; set; }
     }
 }

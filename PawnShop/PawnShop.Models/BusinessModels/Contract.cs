@@ -27,10 +27,6 @@
         [Required]
         public Status Status { get; set; }
 
-        public int OfficeId { get; set; }
-
-        public virtual Office Office { get; set; }
-
         public int ClientId { get; set; }
 
         public virtual Client Client { get; set; }

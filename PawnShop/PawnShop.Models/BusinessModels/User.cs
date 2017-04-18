@@ -16,6 +16,8 @@ namespace PawnShop.Models.BusinessModels
         [Key]
         public int Id { get; set; }
 
+        public int OfficeId { get; set; }
+
         public virtual Office Office { get; set; }
 
         [ForeignKey("Id")]

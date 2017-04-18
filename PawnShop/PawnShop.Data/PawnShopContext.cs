@@ -10,7 +10,7 @@ namespace PawnShop.Data
         public PawnShopContext()
             : base("name=PawnShopContext")
         {
-            //Database.SetInitializer(new PawnShopIni());
+            Database.SetInitializer(new PawnShopIni());
         }
 
         public virtual IDbSet<User> Users { get; set; }
@@ -33,15 +33,9 @@ namespace PawnShop.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Client>()
-                .HasMany(c => c.Offices)
-                .WithMany(o => o.Clients)
-                .Map(m =>
-                {
-                    m.ToTable("ClientsOffices");
-                    m.MapLeftKey("ClientId");
-                    m.MapRightKey("OfficeId");
-                });
+            modelBuilder.Entity<Office>().HasOptional(o => o.CashBox).WithRequired(c => c.Office);
+            modelBuilder.Entity<User>().HasRequired(u => u.Office).WithMany(o => o.Employees).WillCascadeOnDelete(false);
+            modelBuilder.Entity<Office>().HasRequired(o => o.Address).WithOptional(a => a.Office).WillCascadeOnDelete(false);
 
             base.OnModelCreating(modelBuilder);
         }

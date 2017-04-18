@@ -6,6 +6,7 @@
         Active,
         Ended,
         Overtimed,
-        New
+        New,
+        All
     }
 }

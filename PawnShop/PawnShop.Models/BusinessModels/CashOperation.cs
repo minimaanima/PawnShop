@@ -12,28 +12,10 @@
 
         public string Details { get; set; }
 
+        public decimal Value { get; set; }
+
         public int CashBoxId { get; set; }
 
         public virtual CashBox CashBox { get; set; }
-
-        public void WithdrawMoney(decimal money)
-        {
-            //TODO:
-        }
-
-        public void DepositMoney(decimal money)
-        {
-            //TODO:
-        }
-
-        public void PayRent(decimal money)
-        {
-            //TODO:
-        }
-
-        public void GiveSalaries(decimal money)
-        {
-            //TODO:
-        }
     }
 }

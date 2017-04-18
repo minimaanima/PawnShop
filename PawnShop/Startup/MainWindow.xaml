@@ -10,6 +10,8 @@
         WindowStartupLocation="CenterScreen"
         x:Name="AppWindow"
         Icon="..\Images\online-store-2.png"
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
         Title="PawnShop">
 
     <Window.Resources>

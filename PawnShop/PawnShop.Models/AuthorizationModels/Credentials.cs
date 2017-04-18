@@ -14,7 +14,7 @@
         public string Email { get; set; }
 
         [Required]
-        [Password(4, 50, ShouldContainDigit = true, ShouldContainCapitalLetter = false, ShouldContainLowercaseLetter = true, ShouldContainSpecialSymbol = false)]
+        [Password(4, 50, ShouldContainDigit = false, ShouldContainCapitalLetter = false, ShouldContainLowercaseLetter = false, ShouldContainSpecialSymbol = false)]
         public string Password { get; set; }
     }
 }

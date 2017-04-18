@@ -14,6 +14,6 @@ namespace Startup
         /// <summary>
         /// The initial login page
         /// </summary>
-        Login=0
+        Login,ClientsPage,ContractsPage,ChangeUserPage,CashBoxPage,AddClientPage,AddContractPage,ViewContractPage,RegisterPage
     }
 }
