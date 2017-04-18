@@ -69,10 +69,7 @@
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\ICommandDispatcher.cs" />
     <Compile Include="Interfaces\ICommandParser.cs" />
-<<<<<<< HEAD
     <Compile Include="MapperInitiliazer.cs" />
-=======
->>>>>>> df251bf378ce915a10bdb267680b3047ed4ddfee
     <Compile Include="ModelFactories\ClientFactory.cs" />
     <Compile Include="ModelFactories\ContractFactory.cs" />
     <Compile Include="ModelFactories\StatisticFactory.cs" />
